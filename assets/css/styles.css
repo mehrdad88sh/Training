@@ -1,7 +1,51 @@
-#top {
-    background-color: coral;
+.wrapper{
+    width: 1024px;
+    margin: 0 auto;
 }
-
-.test {
-    border-bottom: 10px dotted #ff2f56;
+#top {
+    background-color: #ff6200;
+    display: flex;
+    justify-content: space-around;
+}
+.call-us{
+    color: #732800;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.ip{
+    color: #ffffff;
+}
+.login{
+    color: #732800;
+    text-decoration: blink;
+    font-size: 20px;
+}
+.signup{
+    color: #ffffff;
+    text-decoration: blink;
+    font-size: 20px;
+}
+.YOURlogo{
+    color: #313131;
+}
+.yourLOGO{
+    color: #ff6200;
+}
+.titles{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+li {
+    list-style: none;
+    margin-left: 20px;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+.ul-titles{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
 }
