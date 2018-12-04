@@ -1,51 +1,132 @@
-.wrapper{
+/*
+!* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*!
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+!* HTML5 display-role reset for older browsers *!
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*/
+
+.wrapper {
     width: 1024px;
     margin: 0 auto;
 }
 #top {
     background-color: #ff6200;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.call-us{
+.call-us {
     color: #732800;
     font-size: 20px;
     text-transform: uppercase;
 }
-.ip{
+.ip {
     color: #ffffff;
 }
-.login{
+.login {
     color: #732800;
     text-decoration: blink;
-    font-size: 20px;
+    font-size: 15px;
 }
-.signup{
+.signup {
     color: #ffffff;
     text-decoration: blink;
-    font-size: 20px;
+    font-size: 15px;
 }
-.YOURlogo{
-    color: #313131;
+.YOUR {
+    color: #000000;
 }
-.yourLOGO{
+.LOGO {
     color: #ff6200;
 }
-.titles{
+.titles {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
 }
 li {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 30px;
 }
-#header{
+.breadcrumb{
+    display: flex;
+ }
+.breadcrumb li {
+    margin: 5px;
+}
+.breadcrumb li:after{
+    content: '/';
+    margin-left: 5px;
+}
+.breadcrumb li:last-child:after {
+    display: none;
+}
+.breadcrumb li:last-child > a {
+    color: #000;
+}
+.breadcrumb > li > a {
+    color: #808080;
+}
+.breadcrumb > li:first-child > a {
+}
+ul.breadcrumb{
+    padding: 0;
+}
+#header {
     display: flex;
     justify-content: space-between;
 }
-.ul-titles{
+.ul-titles {
     display: flex;
     align-items: center;
     margin-right: 50px;
+}
+.ul-titles li:hover{
+    border-bottom: 1px solid red;
+}
+.ul-titles li a{
+    text-decoration: none;
 }
