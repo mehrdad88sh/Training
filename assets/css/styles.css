@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,30 +54,41 @@ table {
     background-color: #ff6200;
     display: flex;
     justify-content: space-between;
+    font-size: 15px;
+    padding: 7px;
+}
+.call-ip {
+    display: flex;
+    align-items: center;
 }
 .call-us {
     color: #732800;
-    font-size: 20px;
     text-transform: uppercase;
 }
 .ip {
     color: #ffffff;
+    padding-left: 10px;
 }
 .login {
     color: #732800;
     text-decoration: blink;
-    font-size: 15px;
 }
 .signup {
     color: #ffffff;
     text-decoration: blink;
-    font-size: 15px;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 .YOUR {
     color: #000000;
+    font-size: 35px;
 }
 .LOGO {
     color: #ff6200;
+    font-size: 35px;
 }
 .titles {
     display: flex;
@@ -111,20 +121,39 @@ li {
 .breadcrumb > li:first-child > a {
 }
 ul.breadcrumb{
-    padding: 0;
-}
-#header {
-    display: flex;
-    justify-content: space-between;
+    font-size: 18px;
+    padding: 20px 0 20px 0;
 }
 .ul-titles {
     display: flex;
     align-items: center;
-    margin-right: 50px;
+    font-size: 18px;
 }
 .ul-titles li:hover{
     border-bottom: 1px solid red;
 }
 .ul-titles li a{
     text-decoration: none;
+}
+.h2 {
+    color: #ff6200;
+    padding: 10px 0 9px 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+.h3 {
+    color: #ff6200;
+    font-weight: normal;
+    font-size: 20px;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+.form-style {
+    display: flex;
+    flex-direction: column;
 }
