@@ -6,28 +6,27 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-<div class="wrapper">
-    <div id="top">
-        <div class="call-ip">
-            <span class="call-us">Call us now !</span>
-            <span class="ip">385.154.11.28.35</span>
+    <div class="wrapper">
+        <div id="top">
+            <div class="call-ip">
+                <span class="call-us">Call us now !</span>
+                <span class="ip">385.154.11.28.35</span>
+            </div>
+            <div>
+                <a href="https://freedcamp.com/login" class="login">Login</a>
+                <a href="https://freedcamp.com/register" class="signup">Signup</a>
+            </div>
         </div>
-        <div>
-            <a href="https://freedcamp.com/login" class="login">Login</a>
-            <a href="https://freedcamp.com/register" class="signup">Signup</a>
-        </div>
-    </div>
-    <header id="header">
-        <h1>
-            <span class="YOUR">YOUR</span>
-            <span class="LOGO">LOGO</span>
-        </h1>
-        <div class="titles ul li">
-            <ul class="ul-titles">
+        <header id="header">
+            <h1>
+                <span class="YOUR">YOUR</span>
+                <span class="LOGO">LOGO</span>
+            </h1>
+            <ul class="menu">
                 <li>Title1</li>
                 <li>
                     <a href="#">Title2</a>
-                    <!--<ul>
+                    <ul class="submenu">
                         <li>submenu1</li>
                         <li>submenu2</li>
                         <li>
@@ -38,7 +37,7 @@
                                 <li>submenu3</li>
                             </ul>
                         </li>
-                    </ul>-->
+                    </ul>
                 </li>
                 <li>Title3</li>
                 <li>Title4</li>
@@ -46,58 +45,71 @@
                 <li>Title6</li>
                 <li>Title7</li>
             </ul>
-        </div>
-    </header>
-    <main>
-        <div>
-            <ul class="breadcrumb">
-                <li>
-                    <a style="text-decoration: none" href="#">Home</a>
-                </li>
-                <li>
-                    <a style="text-decoration: none" href="#">Who we are</a>
-                </li>
-                <li>
-                    <label>Contact</label>
-                </li>
-            </ul>
-        </div>
-        <div style="padding: 0 0 20px 0">
-            <h2 class="h2">Contact</h2>
-            <p style="color: grey;font-size: 20px;">
-                lorem ipsum dolor sit amet,consectetur adipiscing.A breadcrumb navigation provide links back to each.previous.page the user navigated through, and shows the user's current location in a website.
-            </p>
-        </div>
-        <div class="contact">
-            <div style="padding: 20px 20px 20px 0; width: 50%">
-                <h3 class="h3">CONTACT US</h3>
-                <form class="form-style">
-                    <input type="text" placeholder="Name" required>
-                    <input type="tel" placeholder="Phone" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <input type="submit" value="Submit">
-                </form>
+        </header>
+        <main>
+            <div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a style="text-decoration: none" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none" href="#">Who we are</a>
+                    </li>
+                    <li>
+                        <label>Contact</label>
+                    </li>
+                </ul>
             </div>
-            <div style="padding: 20px; width: 50%">
-                <h3 class="h3">REACH US</h3>
-                <address>
-                    Coalition Skills Test<br>
-                    535 La Plate Street<br>
-                    4200 Argantina<br>
-                    Phone: 385.534.23.22.44<br>
-                    Fax:232.342.34.22.55<br>
-                </address>
-                <div>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Linkdin</a>
-                    <a href="#">Pinterest</a>
+            <div class="main-contact">
+                <h2 class="h2">Contact</h2>
+                <p style="color: grey;font-size: 20px;">
+                    lorem ipsum dolor sit amet,consectetur adipiscing.A breadcrumb navigation provide links back to
+                    each.previous.page the user navigated through, and shows the user's current location in a website.
+                </p>
+            </div>
+            <div class="contact">
+                <div class="contact-us">
+                    <h3 class="h3">CONTACT US</h3>
+                    <form class="form-style">
+                        <input type="text" placeholder="Name *" required>
+                        <div class="sub-form-phone-email">
+                            <input type="tel" placeholder="Phone *" required>
+                            <input type="email" placeholder="Email *" required>
+                        </div>
+                        <textarea placeholder="Message *" required></textarea>
+                        <input type="submit" value="SUBMIT" class="submit-button">
+                    </form>
+                </div>
+                <div class="reach-us">
+                    <h3 class="h3">REACH US</h3>
+                    <address class="reach-us">
+                        <p style="margin: 9px 0">Coalition Skills Test</p>
+                        <p style="margin-bottom: 20px">
+                            535 La Plate Street<br>
+                            4200 Argantina</p>
+                        <p>
+                            Phone: 385.534.23.22.44
+                            Fax:232.342.34.22.55
+                        </p>
+                    </address>
+                    <ul class="social-buttons">
+                        <li>
+                            <a href="http://www.facebook.com"><i class="icon-spades black"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com"><span class="icon-diamonds red"></span></a>
+                        </li>
+                        <li>
+                            <a href="http://www.twitter.com" ><span class="icon-clubs black"></span></a>
+                        </li>
+                        <li>
+                            <a href="http://www.pinterest.com"><span class="icon-heart red"></span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>&copy 2018</footer>
-</div>
+        </main>
+        <footer>&copy 2018</footer>
+    </div>
 </body>
 </html>

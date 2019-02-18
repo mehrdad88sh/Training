@@ -2,6 +2,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,34 +30,93 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/* end of CSS Reset */
+
+/* font embed define */
+@font-face {
+    font-family: 'cards';
+    src:  url('../fonts/icomoon.eot?y08tt9');
+    src:  url('../fonts/icomoon.eot?y08tt9#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?y08tt9') format('truetype'),
+    url('../fonts/icomoon.woff?y08tt9') format('woff'),
+    url('../fonts/icomoon.svg?y08tt9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'cards' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-spades:before {
+     content: "\e917";
+ }
+
+.icon-diamonds:before {
+    content: "\e919";
+}
+
+.icon-clubs:before {
+    content: "\e918";
+}
+
+.icon-heart:before {
+    content: "\e9da";
+}
+/* font embed define */
 
 .wrapper {
     width: 1024px;
     margin: 0 auto;
 }
+
 #top {
     background-color: #ff6200;
     display: flex;
@@ -57,103 +124,221 @@ table {
     font-size: 15px;
     padding: 7px;
 }
+
 .call-ip {
     display: flex;
     align-items: center;
 }
+
 .call-us {
     color: #732800;
     text-transform: uppercase;
 }
+
 .ip {
     color: #ffffff;
     padding-left: 10px;
 }
+
 .login {
     color: #732800;
     text-decoration: blink;
 }
+
 .signup {
     color: #ffffff;
     text-decoration: blink;
 }
+
 #header {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
 }
+
 .YOUR {
     color: #000000;
     font-size: 35px;
 }
+
 .LOGO {
     color: #ff6200;
     font-size: 35px;
 }
-.titles {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-}
+
 li {
     list-style: none;
     margin-left: 30px;
 }
-.breadcrumb{
+
+.breadcrumb {
     display: flex;
- }
+}
+
 .breadcrumb li {
     margin: 5px;
 }
-.breadcrumb li:after{
+
+.breadcrumb li:after {
     content: '/';
     margin-left: 5px;
 }
+
 .breadcrumb li:last-child:after {
     display: none;
 }
+
 .breadcrumb li:last-child > a {
     color: #000;
 }
+
 .breadcrumb > li > a {
     color: #808080;
 }
+
 .breadcrumb > li:first-child > a {
 }
-ul.breadcrumb{
+
+ul.breadcrumb {
     font-size: 18px;
     padding: 20px 0 20px 0;
 }
-.ul-titles {
+
+.menu {
     display: flex;
     align-items: center;
     font-size: 18px;
 }
-.ul-titles li:hover{
-    border-bottom: 1px solid red;
+
+.menu > li {
+    position: relative;
 }
-.ul-titles li a{
+
+.menu > li:hover {
+
+    border-bottom: 1px solid red;
+    cursor: pointer;
+}
+
+.menu > li:hover > .submenu {
+    display: block;
+}
+
+.menu a {
     text-decoration: none;
 }
+
+.submenu {
+    background: red;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
 .h2 {
     color: #ff6200;
     padding: 10px 0 9px 0;
     font-size: 26px;
     font-weight: bold;
 }
+
 .h3 {
     color: #ff6200;
     font-weight: normal;
     font-size: 20px;
-    border: none;
-    border-bottom-style: solid;
-    border-bottom-color: black;
+    border-bottom: 3px solid black;
+    padding: 10px 0;
 }
+
+.main-contact {
+    padding: 0 0 20px 0;
+}
+
 .contact {
     display: flex;
     justify-content: space-between;
 }
+
+.contact-us {
+    padding: 20px 20px 20px 0;
+    width: 50%;
+}
+
 .form-style {
     display: flex;
     flex-direction: column;
+    padding: 20px 0 20px 0;
+}
+
+.reach-us {
+    padding: 20px 0 20px 0;
+    width: 45%;
+}
+
+form input {
+    background: #ece9d47a;
+    width: 100%;
+    padding: 20px;
+    margin: 10px 10px 10px 0;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+}
+
+form textarea {
+    background: #ece9d47a;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+}
+
+
+.sub-form-phone-email {
+    display: flex;
+    width: 102%;
+}
+
+
+.submit-button {
+    font-size: 15px;
+    color: white;
+    background-color: #ff6200;
+    width: 20%;
+    padding: 2%;
+    margin: 5% 0 5% 0;
+    cursor: pointer;
+}
+
+.social-buttons {
+    display: flex;
+    font-size: 35px;
+}
+
+.social-buttons li {
+    margin: 5px;
+}
+
+.social-buttons li:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.social-buttons li a {
+    color: rgba(0, 0, 0, 0.76);
+    text-decoration: none;
+}
+
+.social-buttons li:hover a {
+    color: darkgray;
+}
+
+.black {
+    color: black;
+}
+
+.red {
+    color: red;
 }
